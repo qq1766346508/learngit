@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background: url(./1.jpg) repeat;
+            position: relative;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+
+        .back {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            background-color: yellow;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            text-align: center;
+        }
+        
+    </style>
+     <script>
+            function changebody() {
+                i = document.form1.body.selectedIndex;
+                document.getElementById("p1").style.color = document.form1.body.options[i].value;;
+            }
+        </script>
+</head>
+
+<body>
+    <p id="p1">敕勒川，阴山下，天似穹庐，笼盖四野。天苍苍，野茫茫，风吹草低见牛羊。
+    </p>
+    <p> ——北朝民歌《敕勒歌》</p>
+    <a href="./index.html" class="back">返回主页</a>
+    <hr>
+    <form name="form1" action="">
+        <b>Body text color: </b>
+        <select name="body" onChange="changebody();">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="pink">Pink</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    </form>
+</body>
+
+</html>
